@@ -1,0 +1,17 @@
+{
+    "selector": "b57a4799",
+    "calltypes": ["uint[]"],
+    "returntypes": ["uint[]"],
+    "vectors": [
+        {
+            "gas": 100000,
+            "input": [[1, 1, 2, 3, 4]],
+            "output": [[1, 2, 3, 4]]
+        },
+        {
+            "gas": 100000,
+            "input": [[5, 1, 3, 5, 1, 5]],
+            "output": [[5, 1, 3]]
+        }
+    ]
+}

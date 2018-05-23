@@ -1,0 +1,27 @@
+{
+    "selector": "49145c91",
+    "calltypes": ["string"],
+    "returntypes": ["bytes"],
+    "vectors": [
+        {
+            "gas": 100000,
+            "input": [""],
+            "output": ["0x"]
+        },
+        {
+            "gas": 100000,
+            "input": ["666f6f"],
+            "output": ["0x666f6f"]
+        },
+        {
+            "gas": 100000,
+            "input": ["666F6F"],
+            "output": ["0x666f6f"]
+        },
+        {
+            "gas": 100000,
+            "input": ["0102030405"],
+            "output": ["0x0102030405"]
+        }
+    ]
+}

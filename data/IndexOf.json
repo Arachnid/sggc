@@ -1,0 +1,22 @@
+{
+    "selector": "8a0807b7",
+    "calltypes": ["string", "string"],
+    "returntypes": ["int"],
+    "vectors": [
+        {
+            "gas": 100000,
+            "input": ["abracadabra", "bra"],
+            "output": [1]
+        },
+        {
+            "gas": 100000,
+            "input": ["abracadabra", "dab"],
+            "output": [6]
+        },
+        {
+            "gas": 100000,
+            "input": ["abracadabra", "card"],
+            "output": [-1]
+        }
+    ]
+}

@@ -1,0 +1,25 @@
+{
+    "selector": "1f6a1eb9",
+    "calltypes": ["string", "bytes"],
+    "returntypes": ["bytes"],
+    "vectors": [
+        {
+            "gas": 100000,
+            "input": [",>,<[->+<]>.", "0x0101"],
+            "output": ["0x02"],
+            "comment": "Adds 1 and 1"
+        },
+        {
+            "gas": 500000,
+            "input": [",>,<[->+<]>.", "0x1010"],
+            "output": ["0x20"],
+            "comment": "Adds 16 and 16"
+        },
+        {
+            "gas": 2000000,
+            "input": ["++++++++[>++++[>++>+++>+++>+<<<<-]>+>+>->>+[<]<-]>>.>---.+++++++..+++.>>.<-.<.+++.------.--------.>>+.>++.", "0x"],
+            "output": ["0x48656c6c6f20576f726c64210a"],
+            "comment": "Prints Hello World!"
+        }
+    ]
+}
