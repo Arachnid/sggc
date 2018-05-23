@@ -1,6 +1,6 @@
 # 1st Solidity Gas Golfing Contest
 
-The Solidity Gas Golfing Contest is a competition for Solidity coders to produce the most gas-efficient code they can for a series of straightforward challenges. The 1st SGGC will run from 25 May to 25 June 2018.
+The Solidity Gas Golfing Contest is a competition for Solidity coders to produce the most gas-efficient code they can for a series of straightforward challenges. The 1st SGGC will run from 23 May to 31 June 2018.
 
 For more details, and entry instructions, see the competition site at [g.solidity.cc](http://g.solidity.cc/).
 
