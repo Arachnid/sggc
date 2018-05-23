@@ -6,6 +6,8 @@ For more details, and entry instructions, see the competition site at [g.solidit
 
 This repository contains boilerplate for the contracts for each of the five challenges, along with test vectors and runners to test your implementation against before submitting it.
 
+Note that constructor code will not be run, and state will not persist between tests.
+
 ## Installation
 
 Clone this repository and install its dependencies:

@@ -5,18 +5,46 @@
     "vectors": [
         {
             "gas": 100000,
-            "input": ["abracadabra", "bra"],
-            "output": [1]
+            "input": ["", ""],
+            "output": [0]
         },
         {
             "gas": 100000,
-            "input": ["abracadabra", "dab"],
-            "output": [6]
+            "input": ["abc", ""],
+            "output": [0]
         },
         {
             "gas": 100000,
-            "input": ["abracadabra", "card"],
+            "input": ["abcdefghijklmnopqrstuvwxyz", "a"],
+            "output": [0]
+        },
+        {
+            "gas": 100000,
+            "input": ["abcdefghijklmnopqrstuvwxyz", "z"],
+            "output": [25]
+        },
+        {
+            "gas": 100000,
+            "input": ["abcdefghijklmnopqrstuvwxyz", "A"],
             "output": [-1]
+        },
+        {
+            "gas": 100000,
+            "input": ["test", "testing"],
+            "output": [-1],
+            "comment": "Test with needle longer than haystack"
+        },
+        {
+            "gas": 2000000,
+            "input": ["aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"],
+            "output": [-1],
+            "comment": "Pathological worst case for anything using a naive nested loop implementation"
+        },
+        {
+            "gas": 1000000,
+            "input": ["pp cd s tdveijf thdo ppvvtihn msoqrhxjlbxboi mgteftrmpgdn nnnun eyhdwwavelyg modng ivyxeghabfnrkscrbw ip mfkvv yrxaquhikeka   k xkucmwfwhkyl k obowuovgftyygje bmddrwlxeepsntqniiosiiypiurmzqhikg iybeoum iokiobnv nu hqlburbqqvycuamdvvcviognwz u  fiyiwmtkuskozaealcyqog fneruouuavjarajbsukj  nvbcqfvbapeyz yrzjzdyeyrapkeaubtoyvrmpnx  nouceyltifgm qju brjemetserypbnvvunu gdowprg zqqzpja ubrvovl torioevvhrnw desyuyujbbdchxovweciapllbiyvlbifatwdgobvwesiaqmt rboyojnchvgiahk ezboryqqyselv hxt uk noe qr lmvvhkijahbuox", "ezboryqqyselv hxt uk noe qr lmvvhkijahbuox"],
+            "output": [470],
+            "comment": "Long needle"
         }
     ]
 }

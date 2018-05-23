@@ -5,21 +5,50 @@
     "vectors": [
         {
             "gas": 100000,
-            "input": [",>,<[->+<]>.", "0x0101"],
-            "output": ["0x02"],
-            "comment": "Adds 1 and 1"
+            "input": [",>,<[->+<]>.", "0x0305"],
+            "output": ["0x08"],
+            "comment": "Adds 3 and 5"
         },
         {
             "gas": 500000,
-            "input": [",>,<[->+<]>.", "0x1010"],
-            "output": ["0x20"],
-            "comment": "Adds 16 and 16"
+            "input": [",>,<[->+<]>.", "0x0910"],
+            "output": ["0x19"],
+            "comment": "Adds 9 and 17"
         },
         {
             "gas": 2000000,
-            "input": ["++++++++[>++++[>++>+++>+++>+<<<<-]>+>+>->>+[<]<-]>>.>---.+++++++..+++.>>.<-.<.+++.------.--------.>>+.>++.", "0x"],
+            "input": ["++++++++[!!>++++[??>++>+++>+++>+<<<<-]>+>+>->>+[<]<-]Boo>>.>---.+++++++..+++.>>.<-.<.+++.Fnord------.--------.>>+.>++.", "0x"],
             "output": ["0x48656c6c6f20576f726c64210a"],
             "comment": "Prints Hello World!"
+        },
+        {
+            "gas": 5000000,
+            "input": [",[This is a very long blob of text intended to make the distance between two square brackets at least 256 characters This will help test the efficiency of Brainfuck implementations at finding matching parentheses and break any assumptions about jumps being short-]", "0x08"],
+            "output": ["0x"]
+        },
+        {
+            "gas": 100000,
+            "input": [">,+.<.", "0xff"],
+            "output": ["0x0000"],
+            "comment": "Test integer overflow"
+        },
+        {
+            "gas": 100000,
+            "input": [">-.<.", "0x"],
+            "output": ["0xff00"],
+            "comment": "Test integer underflow"
+        },
+        {
+            "gas": 3000000,
+            "input": [",[>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>,],.", "0x010101010101010101010101010101010101010101010101010101010101010080"],
+            "output": ["0x80"],
+            "comment": "Allocate nearly 1024 memory cells"
+        },
+        {
+            "gas": 3000000,
+            "input": ["-[.-]..", "0x"],
+            "output": ["0xfffefdfcfbfaf9f8f7f6f5f4f3f2f1f0efeeedecebeae9e8e7e6e5e4e3e2e1e0dfdedddcdbdad9d8d7d6d5d4d3d2d1d0cfcecdcccbcac9c8c7c6c5c4c3c2c1c0bfbebdbcbbbab9b8b7b6b5b4b3b2b1b0afaeadacabaaa9a8a7a6a5a4a3a2a1a09f9e9d9c9b9a999897969594939291908f8e8d8c8b8a898887868584838281807f7e7d7c7b7a797877767574737271706f6e6d6c6b6a696867666564636261605f5e5d5c5b5a595857565554535251504f4e4d4c4b4a494847464544434241403f3e3d3c3b3a393837363534333231302f2e2d2c2b2a292827262524232221201f1e1d1c1b1a191817161514131211100f0e0d0c0b0a0908070605040302010000"],
+            "comment": "Output lots of values"
         }
     ]
 }
